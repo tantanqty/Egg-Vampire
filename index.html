@@ -13,6 +13,12 @@
 .fighter{height:clamp(96px,13.6vw,152px)!important;max-width:32%!important}
 .arena-top{inset:24px 10px auto!important}
 @media(max-width:650px){.fighter{height:clamp(84px,28.8vw,116px)!important;max-width:32%!important}.arena-top{inset:24px 10px auto!important}}
+
+/* Position status panels beneath the hero and enemy sprites */
+.arena-top{inset:auto 10px 7px!important;align-items:flex-end!important;z-index:3!important}
+.arena-unit{width:40%!important;max-width:180px!important}
+.fighter{bottom:54px!important}
+@media(max-width:650px){.arena-top{inset:auto 7px 7px!important}.arena-unit{width:42%!important}.fighter{bottom:54px!important}}
 </style>
 </head>
 <body>
