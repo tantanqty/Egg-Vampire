@@ -28,9 +28,7 @@
 <div class="meter-label"><span>HP</span><span id="hpText">100 / 100</span></div><div class="bar herohealth"><span id="heroBar"></span></div>
 <div class="meter-label"><span>EXP</span><span id="arenaExp">0 / 10</span></div><div class="bar expbar"><span id="hudExpBar"></span></div>
 <div class="hud-statbox"><div class="hud-stat">⚔ POWER<strong id="atk">10</strong></div><div class="hud-stat">🛡 DEFENSE<strong id="def">3</strong></div><div class="hud-stat">💰 GOLD<strong id="goldText">0</strong></div><div class="hud-stat">🏰 CASTLE<strong id="floorTag">Castle 1</strong></div></div>
-</div>
-
-
+</div><div class="panel hud-card"><div class="hud-heading">HERO DETAILS</div><div class="statsgrid"><div class="stat">Attack<b id="atkRight">10</b></div><div class="stat">Defense<b id="defRight">3</b></div><div class="stat">HP<b id="hpTextRight">100 / 100</b></div><div class="stat">Gold<b id="goldTextRight">0</b></div></div></div>
 </aside>
 <main class="hud-center">
 <div class="center-head"><div><h1>CASTLE BATTLE</h1><p id="heroLabelCenter" class="small">Choose your hero to begin</p></div><div class="hud-pills"><span class="tag">Castle 1</span><span class="tag">Gold</span><span class="tag">Eggs</span></div></div>
@@ -43,8 +41,7 @@
 <div class="footeractions"><button class="btn secondary" onclick="toggleAuto()" id="autoBtn">Pause Auto Battle</button><button class="btn secondary" onclick="retreat()">Pause</button><button class="btn bossbtn" onclick="startBossFight()">⚔ Boss Fight</button></div></div>
 <div class="panel battle-log-panel"><div class="hud-heading">▸ BATTLE LOG</div><div class="log" id="log"></div></div>
 </main>
-<aside class="hud-right">
-</aside>
+<aside class="hud-right"><div class="panel hud-card"><div class="hud-heading">✦ EQUIPMENT</div><div class="slots" id="slots"></div></div><div class="panel hud-card"><div class="hud-heading"><span>✦ INVENTORY</span><span class="tag" id="bagCount">0 / 48</span></div><div class="inventory-label">BAG · GEAR DROPS</div><div class="baggrid" id="inventory"></div><p class="small">Egg gear goes into your bag. Select an item to manage it.</p></div><div class="panel hud-card mini-resources"><div class="hud-heading">🥚 EGG COLLECTION</div><span id="eggTag">0 Eggs</span><button class="btn" id="openEggBtn" onclick="openEgg()">Open Egg</button></div></aside>
 </div></section>
 </main>
 <div id="gearModal" style="display:none;position:fixed;inset:0;z-index:35;background:#08060ddf;align-items:center;justify-content:center;padding:20px"><div class="panel" style="max-width:380px;width:100%"><h2 id="gearModalTitle">Gear</h2><p id="gearModalInfo" class="sub"></p><div class="footeractions"><button class="btn" onclick="equipSelected()">Equip</button><button class="btn secondary" id="lockGearBtn" onclick="toggleLockSelected()">Lock</button><button class="btn secondary" id="sellGearBtn" onclick="sellSelected()">Sell</button><button class="btn secondary" onclick="closeGearModal()">Close</button></div></div></div><div id="eggModal" style="display:none;position:fixed;inset:0;z-index:30;background:#08060ddf;align-items:center;justify-content:center;padding:20px">
