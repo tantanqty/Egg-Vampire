@@ -263,4 +263,22 @@ document.getElementById('authOverlay').addEventListener('click',e=>{if(e.target.
 <style>/* Fixed header clearance for gameplay dashboard */#game .dashboard{padding-top:38px}@media(max-width:980px){#game .dashboard{padding-top:42px}}@media(max-width:650px){#game .dashboard{padding-top:44px}}</style>
 
 <style>/* Restore vertical clearance beneath enlarged fixed navigation header */#game .dashboard{padding-top:64px!important}.menu-page{padding-top:64px!important}@media(max-width:980px){#game .dashboard{padding-top:64px!important}.menu-page{padding-top:64px!important}}@media(max-width:650px){#game .dashboard{padding-top:68px!important}.menu-page{padding-top:68px!important}}</style>
-<style>.bag-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:6px}.bag-tab{font-size:9px;padding:5px 2px;border:1px solid #49351d;border-radius:4px;background:#201923;color:#b8a58a}.bag-tab.active{border-color:#dca83b;color:#f0c65d;background:#2a2118}.bag-tab.locked{opacity:.5;cursor:not-allowed}</style>
+<style>.bag-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:6px}.bag-tab{font-size:9px;padding:5px 2px;border:1px solid #49351d;border-radius:4px;background:#201923;color:#b8a58a}.bag-tab.active{border-color:#dca83b;color:#f0c65d;background:#2a2118}.bag-tab.locked{opacity:.5;cursor:not-allowed}
+/* Marketplace Sell layout refresh */
+.market-sell-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,220px) minmax(220px,1fr);gap:12px;max-width:100%;align-items:start;margin:14px 0}
+.market-sell-form>#marketSellType{grid-column:1/-1;width:100%;min-width:0;max-width:none;background:#211a27;border-color:#57432d;padding:11px 13px}
+.market-sell-form>#marketSellItemCards{grid-column:1/-1;width:100%;max-height:440px;overflow-y:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;padding:3px}
+.market-sell-item-card{min-height:88px;transition:border-color .15s,background .15s,transform .15s;cursor:pointer}
+.market-sell-item-card:hover{border-color:#c99537;background:#211a21;transform:translateY(-1px)}
+.market-sell-item-card.selected{border-color:#e8bc67;background:linear-gradient(135deg,#392a18,#241d2a);box-shadow:0 0 0 1px #e8bc67,0 4px 14px #0004}
+.market-sell-item-img{width:68px;height:68px;flex-basis:68px}
+.market-sell-item-details b{font-size:13px;line-height:1.35}
+.market-sell-item-details small{font-size:11px;line-height:1.4}
+.market-sell-form>#marketSellQuantity,.market-sell-form>#marketSellPrice{width:100%;min-width:0;max-width:none;padding:12px}
+.market-sell-form>#marketSellQuantity{grid-column:1}
+.market-sell-form>#marketSellPrice{grid-column:2}
+.market-sell-form>.market-fee-info{grid-column:3;align-self:stretch;display:flex;align-items:center;line-height:1.5;font-size:13px}
+.market-sell-form>button{grid-column:1/-1;width:100%;padding:13px;font-size:14px;font-weight:800}
+@media(max-width:760px){.market-sell-form{grid-template-columns:1fr 1fr}.market-sell-form>.market-fee-info{grid-column:1/-1}.market-sell-form>#marketSellPrice{grid-column:2}.market-sell-form>#marketSellQuantity{grid-column:1}.market-sell-form>#marketSellItemCards{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}}
+@media(max-width:480px){.market-sell-form{grid-template-columns:1fr}.market-sell-form>#marketSellQuantity,.market-sell-form>#marketSellPrice,.market-sell-form>.market-fee-info{grid-column:1}.market-sell-form>#marketSellItemCards{grid-template-columns:1fr 1fr}.market-sell-item-img{width:48px;height:48px;flex-basis:48px}}
+</style>
